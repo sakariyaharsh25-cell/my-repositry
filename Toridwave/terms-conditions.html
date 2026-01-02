@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms and Conditions - Torridwave Technologies. Read our terms of service and usage policies.">
+    <title>Terms & Conditions - Torridwave Technologies</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/premium-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/interactive-features.css">
+    
+    <style>
+        /* Premium Terms & Conditions Styles */
+        .terms-hero {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
+            position: relative;
+            padding: 160px 0 100px;
+            overflow: hidden;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .terms-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&auto=format&fit=crop') center/cover;
+            opacity: 0.15;
+            filter: blur(2px);
+        }
+
+        .terms-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(15, 52, 96, 0.9) 0%, rgba(22, 33, 62, 0.85) 50%, rgba(26, 26, 46, 0.9) 100%);
+        }
+
+        .terms-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .terms-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .breadcrumb-nav {
+            position: relative;
+            z-index: 2;
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .breadcrumb-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: white;
+        }
+
+        .breadcrumb-nav span {
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+
+        .terms-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .terms-section {
+            margin-bottom: 4rem;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 5px solid transparent;
+        }
+
+        .terms-section:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            border-left-color: #764ba2;
+        }
+
+        .terms-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a1a2e;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .terms-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            border-radius: 2px;
+        }
+
+        .terms-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .terms-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .terms-section li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #764ba2;
+            font-size: 1rem;
+        }
+
+        .terms-section ol {
+            padding-left: 2rem;
+        }
+
+        .terms-section ol li {
+            padding-left: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section ol li::before {
+            display: none;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #764ba2;
+            margin-bottom: 3rem;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 20px 40px rgba(118, 75, 162, 0.3);
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-box a:hover {
+            opacity: 0.8;
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(118, 75, 162, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%);
+            border-left: 5px solid #764ba2;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .terms-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .terms-section {
+                padding: 1.5rem;
+            }
+
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="terms-hero">
+        <div class="floating-particles">
+            <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="top: 40%; left: 80%; animation-delay: 2s;"></div>
+            <div class="particle" style="top: 60%; left: 30%; animation-delay: 4s;"></div>
+            <div class="particle" style="top: 80%; left: 70%; animation-delay: 6s;"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="terms-hero-content">
+                        <h1 data-aos="fade-down">Terms & Conditions</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="breadcrumb-nav" data-aos="fade-left">
+                        <a href="index.html">Home</a>
+                        <span>></span>
+                        <span>Terms & Conditions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Terms & Conditions Content -->
+    <section class="terms-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="intro-text" data-aos="fade-up">
+                <p>
+                    Welcome to Torridwave Technologies. These Terms and Conditions govern your use of our website, services, applications, and products. By accessing or using our services, you agree to be bound by these terms. Please read them carefully.
+                </p>
+            </div>
+
+            <!-- Acceptance of Terms -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="100">
+                <h2><i class="fas fa-handshake me-2"></i>Acceptance of Terms</h2>
+                <p>
+                    By accessing and using this website, our services, applications, or products, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                </p>
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> Your continued use of our services after any changes to these terms will constitute your acceptance of such changes.</p>
+                </div>
+            </div>
+
+            <!-- Use License -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="200">
+                <h2><i class="fas fa-key me-2"></i>Use License</h2>
+                <p>
+                    Permission is granted to temporarily download one copy of the materials on Torridwave Technologies' website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                </p>
+                <ul>
+                    <li>Modify or copy the materials</li>
+                    <li>Use the materials for any commercial purpose or for any public display (commercial or non-commercial)</li>
+                    <li>Attempt to decompile or reverse engineer any software contained on Torridwave Technologies' website</li>
+                    <li>Remove any copyright or other proprietary notations from the materials</li>
+                    <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                </ul>
+            </div>
+
+            <!-- Service Description -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="300">
+                <h2><i class="fas fa-cogs me-2"></i>Service Description</h2>
+                <p>
+                    Torridwave Technologies provides Microsoft SharePoint and Power Platform consulting services, including but not limited to:
+                </p>
+                <ul>
+                    <li>SharePoint Online and On-Premise solutions</li>
+                    <li>Power Apps development and customization</li>
+                    <li>Power BI analytics and reporting</li>
+                    <li>SPFx (SharePoint Framework) development</li>
+                    <li>Power Automate workflow automation</li>
+                    <li>Microsoft Forms integration</li>
+                    <li>Workflow solutions and process automation</li>
+                </ul>
+            </div>
+
+            <!-- User Responsibilities -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="400">
+                <h2><i class="fas fa-user-shield me-2"></i>User Responsibilities</h2>
+                <p>You are responsible for:</p>
+                <ol>
+                    <li>Maintaining the confidentiality of your account and password</li>
+                    <li>All activities that occur under your account</li>
+                    <li>Ensuring that all information you provide is accurate and current</li>
+                    <li>Complying with all applicable laws and regulations</li>
+                    <li>Not using our services for any illegal or unauthorized purpose</li>
+                </ol>
+            </div>
+
+            <!-- Intellectual Property -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="500">
+                <h2><i class="fas fa-copyright me-2"></i>Intellectual Property Rights</h2>
+                <p>
+                    All content, features, and functionality of our services, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, and software, are the exclusive property of Torridwave Technologies or its content suppliers and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+                </p>
+                <div class="highlight-box">
+                    <p><strong>Note:</strong> You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our website without prior written consent.</p>
+                </div>
+            </div>
+
+            <!-- Payment Terms -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="600">
+                <h2><i class="fas fa-credit-card me-2"></i>Payment Terms</h2>
+                <p>
+                    For paid services, the following terms apply:
+                </p>
+                <ul>
+                    <li>All fees are quoted in the currency specified at the time of purchase</li>
+                    <li>Payment is due as specified in your service agreement</li>
+                    <li>We reserve the right to change our pricing with 30 days' notice</li>
+                    <li>Refunds are subject to our refund policy as outlined in your service agreement</li>
+                    <li>Late payments may result in suspension or termination of services</li>
+                </ul>
+            </div>
+
+            <!-- Limitation of Liability -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="700">
+                <h2><i class="fas fa-exclamation-triangle me-2"></i>Limitation of Liability</h2>
+                <p>
+                    In no event shall Torridwave Technologies or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Torridwave Technologies' website, even if Torridwave Technologies or a Torridwave Technologies authorized representative has been notified orally or in writing of the possibility of such damage.
+                </p>
+            </div>
+
+            <!-- Governing Law -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="800">
+                <h2><i class="fas fa-gavel me-2"></i>Governing Law</h2>
+                <p>
+                    These terms and conditions are governed by and construed in accordance with the laws of India. Any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts of India.
+                </p>
+            </div>
+
+            <!-- Modifications -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="900">
+                <h2><i class="fas fa-edit me-2"></i>Modifications to Terms</h2>
+                <p>
+                    Torridwave Technologies may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="terms-section" data-aos="fade-up" data-aos-delay="1000">
+                <h2><i class="fas fa-envelope me-2"></i>Contact Information</h2>
+                <p>
+                    If you have any questions about these Terms and Conditions, please contact us at:
+                </p>
+                <div class="highlight-box">
+                    <p><strong>Email:</strong> <a href="mailto:contact@torridwave.com" style="color: #764ba2; font-weight: 600;">contact@torridwave.com</a></p>
+                    <p><strong>Phone:</strong> +91 8200774733</p>
+                    <p><strong>Address:</strong> J.K. Park A-2, Raiya Road</p>
+                </div>
+            </div>
+
+            <!-- Contact Box -->
+            <div class="contact-box" data-aos="zoom-in" data-aos-delay="1100">
+                <h3><i class="fas fa-question-circle me-2"></i>Questions About Our Terms?</h3>
+                <p>If you have any questions or concerns about these Terms & Conditions, we're here to help.</p>
+                <p style="margin-top: 1rem;">
+                    <a href="mailto:contact@torridwave.com">contact@torridwave.com</a> | 
+                    <a href="tel:+918200774733">+91 8200774733</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">TorridWave</h3>
+                    <p class="footer-description">Torridwave is a leading tech-savvy company with its core focus on offering web development using SharePoint and related technologies and process automation services to clients across the globe.</p>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-powerapps.html">Power Apps</a></li>
+                        <li><a href="service-powerbi.html">Power BI</a></li>
+                        <li><a href="service-spfx.html">SPFx Development</a></li>
+                        <li><a href="service-power-automate.html">Power Automate</a></li>
+                        <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
+                        <li><a href="service-workflow.html">Workflow Solutions</a></li>
+                        <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Get in Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>J.K. Park A-2, Raiya Road</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 8200774733</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@torridwave.com</span></li>
+                        <li><i class="fas fa-globe"></i> <span>www.torridwave.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; Copyright Torridwave Technologies 2023. All Rights Reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/interactive-features.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/include-header.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.terms-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+

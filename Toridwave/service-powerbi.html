@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Power BI Solutions - Business Intelligence and Data Analytics Services">
+    <title>Power BI Solutions - TorridWave</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/premium-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/interactive-features.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <style>
+        /* Power BI Specific Styles */
+        .powerbi-hero {
+            background: linear-gradient(135deg, #f2c811 0%, #e6b400 100%);
+            color: white;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .powerbi-icon-large {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #f2c811 0%, #e6b400 100%);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            box-shadow: 0 10px 30px rgba(242, 200, 17, 0.3);
+        }
+
+        .powerbi-icon-large i {
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            border-color: #f2c811;
+            box-shadow: 0 20px 40px rgba(242, 200, 17, 0.1);
+        }
+
+        .dashboard-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f2c811 0%, #e6b400 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .dashboard-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .data-source-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .data-source-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .data-source-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .data-source-icon {
+            font-size: 1.5rem;
+            color: #f2c811;
+            margin-bottom: 10px;
+        }
+
+        .kpi-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f2c811;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Power BI Hero -->
+    <section class="powerbi-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="powerbi-icon-large" data-aos="zoom-in">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">Power BI Solutions</h1>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
+                        Transform your data into actionable insights with enterprise-grade
+                        business intelligence solutions powered by Microsoft Power BI.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#consultation" class="btn btn-light btn-lg rounded-pill px-4">
+                            <i class="fas fa-chart-line me-2"></i>Get Analytics Audit
+                        </a>
+                        <a href="#solutions" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                            <i class="fas fa-eye me-2"></i>View Dashboards
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="mb-4">Data-Driven Decision Making</h2>
+                    <p>
+                        Microsoft Power BI is a comprehensive business analytics solution that
+                        enables organizations to visualize data, share insights, and make data-driven
+                        decisions. Our Power BI experts create interactive dashboards and reports
+                        that transform complex data into clear, actionable intelligence.
+                    </p>
+                    <p>
+                        We deliver end-to-end Power BI solutions, from data modeling and ETL processes
+                        to advanced analytics and AI-powered insights, all while ensuring enterprise
+                        security and governance.
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="kpi-card">
+                                <div class="kpi-value">90%</div>
+                                <p>Faster Insights</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="kpi-card">
+                                <div class="kpi-value">70%</div>
+                                <p>Cost Reduction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="premium-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop"
+                            alt="Power BI Dashboard" class="img-fluid rounded mb-3">
+                        <h4>Why Choose Our Power BI Services?</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Microsoft Experts</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time Data Analytics</li>
+                            <li><i class="fas fa-check-circle"></i> Advanced AI Capabilities</li>
+                            <li><i class="fas fa-check-circle"></i> Enterprise Security</li>
+                            <li><i class="fas fa-check-circle"></i> Mobile Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="section bg-light" id="solutions">
+        <div class="container">
+            <div class="premium-section-title" data-aos="fade-up">
+                <h2>Power BI Services</h2>
+                <p>Comprehensive business intelligence solutions</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4>Interactive Dashboards</h4>
+                        <p>Real-time dashboards with drill-down capabilities and personalized views</p>
+                        <ul class="text-start mt-3">
+                            <li>Executive dashboards</li>
+                            <li>Departmental views</li>
+                            <li>Real-time updates</li>
+                            <li>Mobile responsive</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Data Modeling</h4>
+                        <p>Advanced data modeling, ETL processes, and data warehouse design</p>
+                        <ul class="text-start mt-3">
+                            <li>Data transformation</li>
+                            <li>Relationship design</li>
+                            <li>Performance optimization</li>
+                            <li>Incremental refresh</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>AI Analytics</h4>
+                        <p>AI-powered insights, predictive analytics, and machine learning integration</p>
+                        <ul class="text-start mt-3">
+                            <li>Predictive models</li>
+                            <li>Natural language Q&A</li>
+                            <li>Anomaly detection</li>
+                            <li>Sentiment analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h4>Data Integration</h4>
+                        <p>Connect multiple data sources including cloud, on-premise, and APIs</p>
+                        <ul class="text-start mt-3">
+                            <li>Azure services</li>
+                            <li>SQL databases</li>
+                            <li>API connections</li>
+                            <li>Excel integration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Security & Governance</h4>
+                        <p>Row-level security, data governance, and compliance management</p>
+                        <ul class="text-start mt-3">
+                            <li>Role-based access</li>
+                            <li>Data encryption</li>
+                            <li>Audit logging</li>
+                            <li>GDPR compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Training & Support</h4>
+                        <p>Comprehensive training programs and ongoing technical support</p>
+                        <ul class="text-start mt-3">
+                            <li>User training</li>
+                            <li>Admin training</li>
+                            <li>24/7 support</li>
+                            <li>Best practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Sources -->
+    <section class="section">
+        <div class="container">
+            <div class="premium-section-title" data-aos="fade-up">
+                <h2>Supported Data Sources</h2>
+                <p>Connect Power BI with your existing systems</p>
+            </div>
+            <div class="data-source-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="data-source-item">
+                    <div class="data-source-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h6>Azure SQL</h6>
+                </div>
+                <div class="data-source-item">
+                    <div class="data-source-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h6>SQL Server</h6>
+                </div>
+                <div class="data-source-item">
+                    <div class="data-source-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h6>Azure Services</h6>
+                </div>
+                <div class="data-source-item">
+                    <div class="data-source-icon">
+                        <i class="fab fa-salesforce"></i>
+                    </div>
+                    <h6>Salesforce</h6>
+                </div>
+                <div class="data-source-item">
+                    <div class="data-source-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h6>Excel Files</h6>
+                </div>
+                <div class="data-source-item">
+                    <div class="data-source-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h6>SharePoint</h6>
+                </div>
+                <div class="data-source-item">
+                    <div class="data-source-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h6>REST APIs</h6>
+                </div>
+                <div class="data-source-item">
+                    <div class="data-source-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h6>Google Analytics</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="premium-section-title" data-aos="fade-up">
+                <h2>Industry Use Cases</h2>
+                <p>Power BI solutions across various industries</p>
+            </div>
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-4">
+                    <div class="use-case-card">
+                        <div class="use-case-icon bg-primary">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5>Sales Analytics</h5>
+                        <p>Track sales performance, forecast trends, and identify growth opportunities</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="use-case-card">
+                        <div class="use-case-icon bg-success">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h5>Operations</h5>
+                        <p>Monitor production efficiency, supply chain metrics, and operational costs</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="use-case-card">
+                        <div class="use-case-icon bg-warning">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h5>Healthcare Analytics</h5>
+                        <p>Patient metrics, treatment outcomes, and resource utilization analysis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" id="consultation">
+        <div class="container">
+            <div class="cta-box" style="background: linear-gradient(135deg, #f2c811 0%, #e6b400 100%);"
+                data-aos="zoom-in">
+                <h2 class="display-5 mb-3">Unlock Your Data's Potential</h2>
+                <p class="lead mb-4">
+                    Schedule a free analytics assessment and discover how Power BI can transform
+                    your business intelligence capabilities.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-calendar-alt me-2"></i>Book Free Assessment
+                    </a>
+                    <a href="tel:+15551234567" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-phone me-2"></i>Call Analytics Expert
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">TorridWave</h3>
+                    <p class="footer-description">Microsoft Power Platform and Business Intelligence experts. We
+                        transform data into actionable insights with Power BI, Power Apps, and advanced analytics
+                        solutions.</p>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                                                <li><a href="service-support.html">Support</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-powerapps.html">Power Apps</a></li>
+                        <li><a href="service-powerbi.html">Power BI</a></li>
+                        <li><a href="service-spfx.html">SPFx Development</a></li>
+                        <li><a href="service-power-automate.html">Power Automate</a></li>
+                        <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
+                        <li><a href="service-workflow.html">Workflow Solutions</a></li>
+                        <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>J.K. Park A-2, Raiya Road</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 8200774733</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@torridwave.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Fri: 9:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> TorridWave. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/interactive-features.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/include-header.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', function () {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+        }
+
+        // Dropdown functionality
+        const dropdowns = document.querySelectorAll('.has-dropdown');
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('.nav-link');
+            if (link) {
+                link.addEventListener('click', function (e) {
+                    if (window.innerWidth > 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.has-dropdown')) {
+                dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            }
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        if (themeIcon) {
+            if (savedTheme === 'dark') {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function () {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                if (themeIcon) {
+                    if (newTheme === 'dark') {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SharePoint Solutions - Complete SharePoint implementation, customization, and migration services">
+    <title>SharePoint Solutions - TorridWave</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/premium-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/interactive-features.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <style>
+        /* SharePoint Specific Styles */
+        .sharepoint-hero {
+            background: linear-gradient(135deg, #005ba9 0%, #0078d4 100%);
+            color: white;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .sharepoint-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .sharepoint-icon-large {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #0078d4 0%, #005ba9 100%);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+
+        .sharepoint-icon-large i {
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            border-color: #0078d4;
+            box-shadow: 0 20px 40px rgba(0, 120, 212, 0.1);
+        }
+
+        .solution-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0078d4 0%, #005ba9 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .solution-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .migration-process {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .migration-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .migration-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0078d4 0%, #005ba9 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+
+        .case-study {
+            background: linear-gradient(135deg, rgba(0, 120, 212, 0.1) 0%, rgba(0, 91, 169, 0.1) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0078d4;
+            margin-bottom: 10px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #0078d4 0%, #005ba9 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comparison-table .check {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .comparison-table .cross {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .sharepoint-hero {
+                padding: 120px 0 60px;
+                margin-top: 80px;
+            }
+            
+            .sharepoint-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .solution-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sharepoint-hero {
+                padding: 100px 0 50px;
+                margin-top: 70px;
+            }
+            
+            .sharepoint-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .sharepoint-icon-large {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .sharepoint-icon-large i {
+                font-size: 2.5rem;
+            }
+            
+            .solution-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .solution-icon i {
+                font-size: 2rem;
+            }
+            
+            .stat-value {
+                font-size: 2rem;
+            }
+            
+            .migration-step {
+                margin-bottom: 20px;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .sharepoint-hero {
+                padding: 90px 0 40px;
+                margin-top: 65px;
+            }
+            
+            .sharepoint-hero h1 {
+                font-size: 1.75rem;
+            }
+            
+            .sharepoint-hero .lead {
+                font-size: 1rem;
+            }
+            
+            .btn-lg {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .comparison-table {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- SharePoint Hero -->
+    <section class="sharepoint-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="sharepoint-icon-large" data-aos="zoom-in">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">SharePoint Solutions</h1>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
+                        Complete SharePoint implementation, customization, and migration services.
+                        Build powerful intranets, document management systems, and collaboration platforms.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#consultation" class="btn btn-light btn-lg rounded-pill px-4">
+                            <i class="fas fa-calendar-check me-2"></i>Free Consultation
+                        </a>
+                        <a href="#solutions" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                            <i class="fas fa-cogs me-2"></i>View Solutions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="mb-4">Enterprise SharePoint Solutions</h2>
+                    <p>
+                        We provide comprehensive SharePoint services that transform how your organization
+                        collaborates, manages content, and automates business processes. Our solutions are
+                        tailored to meet your specific business needs and drive digital transformation.
+                    </p>
+                    <p>
+                        Whether you need a simple intranet or a complex enterprise portal, our SharePoint
+                        experts deliver solutions that enhance productivity, improve communication, and
+                        streamline operations.
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-value">500+</div>
+                                <p>SharePoint Projects</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-value">99%</div>
+                                <p>Client Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="premium-card">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop"
+                            alt="SharePoint Solutions" class="img-fluid rounded mb-3">
+                        <h4>Why Choose Our SharePoint Services?</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Microsoft Experts</li>
+                            <li><i class="fas fa-check-circle"></i> Custom Development</li>
+                            <li><i class="fas fa-check-circle"></i> Seamless Migration</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Support</li>
+                            <li><i class="fas fa-check-circle"></i> Training & Documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="section bg-light" id="solutions">
+        <div class="container">
+            <div class="premium-section-title" data-aos="fade-up">
+                <h2>Our SharePoint Solutions</h2>
+                <p>Comprehensive services for all your SharePoint needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4>Intranet Development</h4>
+                        <p>Modern, responsive intranet portals with personalized user experiences</p>
+                        <ul class="text-start mt-3">
+                            <li>Employee portals</li>
+                            <li>News & announcements</li>
+                            <li>Team sites</li>
+                            <li>Corporate directories</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h4>Document Management</h4>
+                        <p>Secure document storage, version control, and collaboration</p>
+                        <ul class="text-start mt-3">
+                            <li>Document libraries</li>
+                            <li>Version control</li>
+                            <li>Metadata management</li>
+                            <li>Search optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <h4>Migration Services</h4>
+                        <p>Seamless migration from legacy systems to modern SharePoint</p>
+                        <ul class="text-start mt-3">
+                            <li>SharePoint 2013/2016 to Online</li>
+                            <li>File shares to SharePoint</li>
+                            <li>Third-party systems</li>
+                            <li>Content cleanup</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Custom Development</h4>
+                        <p>Custom web parts, apps, and integrations using SPFx</p>
+                        <ul class="text-start mt-3">
+                            <li>SPFx web parts</li>
+                            <li>Custom forms</li>
+                            <li>API integrations</li>
+                            <li>Workflow solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Security & Governance</h4>
+                        <p>Comprehensive security setup and governance policies</p>
+                        <ul class="text-start mt-3">
+                            <li>Permission management</li>
+                            <li>Compliance setup</li>
+                            <li>Audit trails</li>
+                            <li>Backup solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Support & Training</h4>
+                        <p>Ongoing support and comprehensive training programs</p>
+                        <ul class="text-start mt-3">
+                            <li>24/7 technical support</li>
+                            <li>User training</li>
+                            <li>Admin training</li>
+                            <li>Documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Migration Process -->
+    <section class="section">
+        <div class="container">
+            <div class="premium-section-title" data-aos="fade-up">
+                <h2>Migration Process</h2>
+                <p>Our proven 6-step migration methodology</p>
+            </div>
+            <div class="migration-process" data-aos="fade-up" data-aos-delay="100">
+                <div class="migration-step">
+                    <div class="migration-number">1</div>
+                    <h5>Assessment</h5>
+                    <p>Analyze current environment and requirements</p>
+                </div>
+                <div class="migration-step">
+                    <div class="migration-number">2</div>
+                    <h5>Planning</h5>
+                    <p>Develop detailed migration strategy</p>
+                </div>
+                <div class="migration-step">
+                    <div class="migration-number">3</div>
+                    <h5>Preparation</h5>
+                    <p>Clean up and organize content</p>
+                </div>
+                <div class="migration-step">
+                    <div class="migration-number">4</div>
+                    <h5>Migration</h5>
+                    <p>Execute migration with minimal downtime</p>
+                </div>
+                <div class="migration-step">
+                    <div class="migration-number">5</div>
+                    <h5>Testing</h5>
+                    <p>Validate migrated content and functionality</p>
+                </div>
+                <div class="migration-step">
+                    <div class="migration-number">6</div>
+                    <h5>Support</h5>
+                    <p>Provide training and ongoing support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="premium-section-title" data-aos="fade-up">
+                <h2>Why Choose Us?</h2>
+                <p>Compare our SharePoint services with the competition</p>
+            </div>
+            <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Other Providers</th>
+                            <th>TorridWave</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Microsoft Experts</td>
+                            <td class="cross">Limited</td>
+                            <td class="check">100% Experts</td>
+                        </tr>
+                        <tr>
+                            <td>Custom Development</td>
+                            <td>Basic Templates</td>
+                            <td class="check">Fully Custom</td>
+                        </tr>
+                        <tr>
+                            <td>Migration Experience</td>
+                            <td>Basic Migration</td>
+                            <td class="check">Complex Migrations</td>
+                        </tr>
+                        <tr>
+                            <td>Support Response Time</td>
+                            <td>24-48 hours</td>
+                            <td class="check">
+                                < 2 hours</td>
+                        </tr>
+                        <tr>
+                            <td>Training Included</td>
+                            <td class="cross">Additional Cost</td>
+                            <td class="check">Included Free</td>
+                        </tr>
+                        <tr>
+                            <td>Security Compliance</td>
+                            <td>Basic Security</td>
+                            <td class="check">Enterprise Grade</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="section">
+        <div class="container">
+            <div class="case-study" data-aos="zoom-in">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3>Case Study: Global Corporation</h3>
+                        <p class="lead">
+                            "TorridWave migrated our entire SharePoint 2013 farm with 2TB of data to SharePoint Online
+                            with zero downtime. Their expertise and planning made the transition seamless."
+                        </p>
+                        <div class="d-flex align-items-center mt-4">
+                            <div class="me-3">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop"
+                                    alt="Client" class="rounded-circle" style="width: 60px; height: 60px;">
+                            </div>
+                            <div>
+                                <h5 class="mb-0">David Wilson</h5>
+                                <p class="text-muted mb-0">IT Director, Fortune 500 Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="mt-4 mt-lg-0">
+                            <div class="stat-value">2TB</div>
+                            <p>Data Migrated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="section" id="consultation">
+        <div class="container">
+            <div class="cta-box" style="background: linear-gradient(135deg, #0078d4 0%, #005ba9 100%);"
+                data-aos="zoom-in">
+                <h2 class="display-5 mb-3">Start Your SharePoint Journey</h2>
+                <p class="lead mb-4">
+                    Get a free consultation and discover how our SharePoint solutions can transform
+                    your organization's collaboration and productivity.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-calendar-alt me-2"></i>Schedule Demo
+                    </a>
+                    <a href="tel:+15551234567" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-phone me-2"></i>Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">TorridWave</h3>
+                    <p class="footer-description">We specialize in Microsoft SharePoint and Power Platform solutions.
+                        Creating innovative products and services that transform businesses with Power Apps, Power BI,
+                        SPFx, Power Automate, and more.</p>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                                                <li><a href="service-support.html">Support</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-powerapps.html">Power Apps</a></li>
+                        <li><a href="service-powerbi.html">Power BI</a></li>
+                        <li><a href="service-spfx.html">SPFx Development</a></li>
+                        <li><a href="service-power-automate.html">Power Automate</a></li>
+                        <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
+                        <li><a href="service-workflow.html">Workflow Solutions</a></li>
+                        <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>J.K. Park A-2, Raiya Road</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 8200774733</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@torridwave.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Fri: 9:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> TorridWave. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/interactive-features.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/include-header.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Set current year
+        const currentYearElement = document.getElementById('currentYear');
+        if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

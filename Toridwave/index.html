@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="description"
+        content="TorridWave - Innovation in Motion. Leading technology solutions for your business."> -->
+    <title>TorridWave Technologies   </title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/interactive-features.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="TorridWave - Microsoft SharePoint & Power Platform Experts">
+    <meta property="og:description"
+        content="We specialize in Microsoft SharePoint products and services including Power Apps, Power BI, SPFx, Power Automate, Microsoft Forms, and Workflow solutions.">
+    <meta property="og:image" content="https://torridwave.com/img/og-image.jpg">
+    <meta property="og:url" content="https://torridwave.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TorridWave - Microsoft SharePoint Experts">
+    <meta name="twitter:description"
+        content="Transform your business with Microsoft SharePoint and Power Platform solutions.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TorridWave",
+        "url": "https://torridwave.com",
+        "logo": "https://torridwave.com/img/logo.png",
+        "description": "Microsoft SharePoint and Power Platform consulting company specializing in Power Apps, Power BI, SPFx, Power Automate, and Workflow solutions.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Business Street",
+            "addressLocality": "City",
+            "addressCountry": "Country"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91 8200774733",
+            "contactType": "Customer Service",
+            "email": "contact@torridwave.com"
+        },
+        "sameAs": [
+            "https://www.facebook.com/torridwave",
+            "https://www.linkedin.com/company/torridwave",
+            "https://twitter.com/torridwave"
+        ]
+    }
+    </script>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const serviceItem = document.querySelector(".has-dropdown");
+        const serviceLink = serviceItem.querySelector(".nav-link");
+        const chevron = serviceItem.querySelector(".fa-chevron-down");
+
+        serviceLink.addEventListener("click", function (e) {
+            e.preventDefault(); // pehle navigation roko
+
+            // Toggle dropdown
+            serviceItem.classList.toggle("active");
+
+            if (chevron) {
+                chevron.style.transform = serviceItem.classList.contains("active")
+                    ? "rotate(180deg)"
+                    : "rotate(0deg)";
+            }
+
+            // 250ms baad page navigate
+            setTimeout(() => {
+                window.location.href = serviceLink.getAttribute("href");
+            }, 250);
+        });
+    });
+</script>
+
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Slider Section (Video Background की जगह) -->
+    <section class="hero-slider-section">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Slide 1 -->
+            <div class="slide active"
+                style="background-image: url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1600&auto=format&fit=crop');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Microsoft SharePoint Experts</h1>
+                        <p class="slide-subtitle">Complete SharePoint Implementation & Customization</p>
+                        <p class="slide-description">
+                            We build enterprise-grade SharePoint solutions including intranets, document management
+                            systems,
+                            and collaboration platforms tailored to your business needs.
+                        </p>
+                        <a href="services.html#sharepoint" class="btn btn-primary btn-animated">Explore SharePoint</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&auto=format&fit=crop');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Power Apps Development</h1>
+                        <p class="slide-subtitle">Build Custom Apps Without Code</p>
+                        <p class="slide-description">
+                            Create powerful business applications with Microsoft Power Apps. Connect to your data
+                            sources
+                            and deploy across all devices in days, not months.
+                        </p>
+                        <a href="services.html#powerapps" class="btn btn-primary btn-animated">Discover Power Apps</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&auto=format&fit=crop');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Power BI Analytics</h1>
+                        <p class="slide-subtitle">Transform Data into Insights</p>
+                        <p class="slide-description">
+                            Interactive dashboards and reports that drive data-driven decision making.
+                            Real-time analytics for better business outcomes.
+                        </p>
+                        <a href="services.html#powerbi" class="btn btn-primary btn-animated">View Power BI</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Automation Solutions</h1>
+                        <p class="slide-subtitle">Power Automate & Workflows</p>
+                        <p class="slide-description">
+                            Streamline business processes with automated workflows. Connect apps and services
+                            to boost productivity and reduce manual work.
+                        </p>
+                        <a href="services.html#powerautomate" class="btn btn-primary btn-animated">Automate Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&auto=format&fit=crop');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1 class="slide-title">SPFx Development</h1>
+                        <p class="slide-subtitle">Modern SharePoint Extensions</p>
+                        <p class="slide-description">
+                            Custom web parts and extensions using SharePoint Framework.
+                            Modern, responsive, and mobile-friendly solutions.
+                        </p>
+                        <a href="services.html#spfx" class="btn btn-primary btn-animated">Learn SPFx</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation Buttons -->
+        <button class="slider-nav prev" id="sliderPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-nav next" id="sliderNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Slider Dots/Pagination -->
+        <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+        </div>
+
+        <!-- Auto-play controls -->
+        <div class="slider-controls">
+            <button class="control-btn" id="playPauseBtn" title="Pause">
+                <i class="fas fa-pause"></i>
+            </button>
+            <span class="slide-counter" id="slideCounter">1 / 5</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>About TorridWave</h2>
+                <p>Your Trusted Microsoft SharePoint & Power Platform Partner</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6 reveal fade-in-left">
+                    <h3>Transforming Businesses with Microsoft SharePoint Solutions</h3>
+                    <p>
+                        TorridWave is a specialized Microsoft SharePoint and Power Platform consulting company
+                        that helps businesses leverage the full potential of Microsoft 365. We develop and
+                        implement custom solutions using Power Apps, Power BI, SPFx, Power Automate, Microsoft
+                        Forms, and Workflow technologies.
+                    </p>
+                    <p>
+                        Our team of Microsoft experts is dedicated to creating innovative SharePoint
+                        products and services that streamline business processes, enhance productivity, and drive
+                        digital transformation. We combine deep technical expertise with business acumen to deliver
+                        solutions that make a real impact.
+                    </p>
+                    <a href="about.html" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+                <div class="col-md-6 reveal fade-in-right">
+                    <div class="floating">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop"
+                            alt="About TorridWave" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Our Services</h2>
+                <p>Comprehensive Microsoft SharePoint & Power Platform Solutions</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card card-hover reveal stagger-1">
+                    <div class="service-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Power Apps</h3>
+                    <p>
+                        Build custom business applications without code using Microsoft Power Apps.
+                        Create apps that connect to your data and work seamlessly across devices.
+                    </p>
+                    <a href="services.html#powerapps" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+                <div class="service-card card-hover reveal stagger-2">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Power BI</h3>
+                    <p>
+                        Transform your data into actionable insights with Power BI. Create interactive
+                        dashboards and reports that drive data-driven decision making.
+                    </p>
+                    <a href="services.html#powerbi" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+                <div class="service-card card-hover reveal stagger-3">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>SPFx Development</h3>
+                    <p>
+                        Custom SharePoint Framework (SPFx) solutions and web parts. Extend SharePoint
+                        with modern, responsive, and mobile-friendly components.
+                    </p>
+                    <a href="services.html#spfx" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+                <div class="service-card card-hover reveal stagger-4">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Power Automate</h3>
+                    <p>
+                        Automate business processes and workflows with Power Automate. Connect apps
+                        and services to streamline repetitive tasks and boost productivity.
+                    </p>
+                    <a href="services.html#powerautomate" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+                <div class="service-card card-hover reveal stagger-5">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Microsoft Forms</h3>
+                    <p>
+                        Create surveys, quizzes, and forms with Microsoft Forms. Collect responses
+                        and analyze data with integrated Power BI dashboards.
+                    </p>
+                    <a href="services.html#forms" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+                <div class="service-card card-hover reveal stagger-6">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Workflow Solutions</h3>
+                    <p>
+                        Design and implement custom workflow solutions using SharePoint Workflows
+                        and Power Automate to automate business processes.
+                    </p>
+                    <a href="services.html#workflow" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+                <div class="service-card card-hover reveal stagger-7">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>SharePoint Solutions</h3>
+                    <p>
+                        Complete SharePoint implementation, customization, and migration services.
+                        Build intranets, document management systems, and collaboration platforms.
+                    </p>
+                    <a href="services.html#sharepoint" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Microsoft Services Icons Section
+    <section class="microsoft-services-section">
+        <div class="container">
+            <div class="section-title reveal text-center mb-5">
+                <h2>Explore Our Microsoft Services</h2>
+                <p>Click on any service to learn more</p>
+            </div>
+            <div class="microsoft-services-grid">
+                <a href="services.html#powerapps" class="microsoft-service-icon icon-powerapps reveal stagger-1">
+                    <div class="microsoft-icon-wrapper">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                        </svg>
+                    </div>
+                    <span class="microsoft-service-name">Power Apps</span>
+                </a>
+                <a href="services.html#powerbi" class="microsoft-service-icon icon-powerbi reveal stagger-2">
+                    <div class="microsoft-icon-wrapper">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="3" y="18" width="6" height="4" rx="1"/>
+                            <rect x="10" y="14" width="6" height="8" rx="1"/>
+                            <rect x="17" y="10" width="6" height="12" rx="1"/>
+                        </svg>
+                    </div>
+                    <span class="microsoft-service-name">Power BI</span>
+                </a>
+                <a href="services.html#spfx" class="microsoft-service-icon icon-spfx reveal stagger-3">
+                    <div class="microsoft-icon-wrapper">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <span class="microsoft-service-name">SPFx</span>
+                </a>
+                <a href="services.html#powerautomate" class="microsoft-service-icon icon-powerautomate reveal stagger-4">
+                    <div class="microsoft-icon-wrapper">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <span class="microsoft-service-name">Power Automate</span>
+                </a>
+                <a href="services.html#forms" class="microsoft-service-icon icon-forms reveal stagger-5">
+                    <div class="microsoft-icon-wrapper">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                        </svg>
+                    </div>
+                    <span class="microsoft-service-name">Microsoft Forms</span>
+                </a>
+                <a href="services.html#workflow" class="microsoft-service-icon icon-workflow reveal stagger-6">
+                    <div class="microsoft-icon-wrapper">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <span class="microsoft-service-name">Workflow</span>
+                </a>
+                <a href="services.html#sharepoint" class="microsoft-service-icon icon-sharepoint reveal stagger-7">
+                    <div class="microsoft-icon-wrapper">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l8 4v8.64c0 .64-.38 1.24-.96 1.5L12 20.5l-7.04-3.18c-.58-.26-.96-.86-.96-1.5V8.18l8-4z"/>
+                        </svg>
+                    </div>
+                    <span class="microsoft-service-name">SharePoint</span>
+                </a>
+                <a href="services.html" class="microsoft-service-icon icon-office365 reveal stagger-8">
+                    <div class="microsoft-icon-wrapper">
+                        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l8 4v8.64c0 .64-.38 1.24-.96 1.5L12 20.5l-7.04-3.18c-.58-.26-.96-.86-.96-1.5V8.18l8-4z"/>
+                        </svg>
+                    </div>
+                    <span class="microsoft-service-name">Office 365</span>
+                </a>
+            </div>
+        </div>
+    </section>
+     -->
+    <!-- Stats Section -->
+    <section class="section bg-gradient text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-4 reveal">
+                    <div class="stat-item">
+                        <i class="fas fa-project-diagram mb-3" style="font-size: 3rem; opacity: 0.8;"></i>
+                        <h2 class="display-4" data-count="500">0</h2>
+                        <p>SharePoint Projects</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4 reveal stagger-1">
+                    <div class="stat-item">
+                        <i class="fas fa-users mb-3" style="font-size: 3rem; opacity: 0.8;"></i>
+                        <h2 class="display-4" data-count="200">0</h2>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4 reveal stagger-2">
+                    <div class="stat-item">
+                        <i class="fab fa-microsoft mb-3" style="font-size: 3rem; opacity: 0.8;"></i>
+                        <h2 class="display-4" data-count="50">0</h2>
+                        <p>Microsoft Expertise</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4 reveal stagger-3">
+                    <div class="stat-item">
+                        <i class="fas fa-award mb-3" style="font-size: 3rem; opacity: 0.8;"></i>
+                        <h2 class="display-4" data-count="10">0</h2>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Why Choose TorridWave?</h2>
+                <p>Your Trusted Microsoft SharePoint & Power Platform Partner</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4 reveal stagger-1">
+                    <div class="service-card card-hover text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Microsoft Expertise</h3>
+                        <p>Our team consists of Microsoft Experts with expertise in SharePoint, Power
+                            Platform, and Microsoft 365.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 reveal stagger-2">
+                    <div class="service-card card-hover text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Rapid Development</h3>
+                        <p>We deliver solutions faster using Power Apps and low-code platforms, reducing development
+                            time and costs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 reveal stagger-3">
+                    <div class="service-card card-hover text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock support and maintenance for all your SharePoint and Power Platform solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>TorridWave vs Competitors</h2>
+                <p>See why businesses choose us for Microsoft SharePoint solutions</p>
+            </div>
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="comparison-cell feature">Feature</div>
+                    <div class="comparison-cell competitor">Other Companies</div>
+                    <div class="comparison-cell torridwave">TorridWave</div>
+                </div>
+                <div class="comparison-row reveal stagger-1">
+                    <div class="comparison-cell feature">
+                        <i class="fas fa-check-circle text-primary"></i> Microsoft Expertise Team
+                    </div>
+                    <div class="comparison-cell competitor">
+                        <i class="fas fa-times text-danger"></i> Limited
+                    </div>
+                    <div class="comparison-cell torridwave">
+                        <i class="fas fa-check-circle text-success"></i> 100% Expertise
+                    </div>
+                </div>
+                <div class="comparison-row reveal stagger-2">
+                    <div class="comparison-cell feature">
+                        <i class="fas fa-check-circle text-primary"></i> Response Time
+                    </div>
+                    <div class="comparison-cell competitor">
+                        <i class="fas fa-clock text-warning"></i> 24-48 hours
+                    </div>
+                    <div class="comparison-cell torridwave">
+                        <i class="fas fa-bolt text-success"></i>
+                        < 2 hours </div>
+                    </div>
+                    <div class="comparison-row reveal stagger-3">
+                        <div class="comparison-cell feature">
+                            <i class="fas fa-check-circle text-primary"></i> SharePoint Expertise
+                        </div>
+                        <div class="comparison-cell competitor">
+                            <i class="fas fa-star-half-alt text-warning"></i> Basic
+                        </div>
+                        <div class="comparison-cell torridwave">
+                            <i class="fas fa-star text-success"></i> Expert Level
+                        </div>
+                    </div>
+                    <div class="comparison-row reveal stagger-4">
+                        <div class="comparison-cell feature">
+                            <i class="fas fa-check-circle text-primary"></i> Support Availability
+                        </div>
+                        <div class="comparison-cell competitor">
+                            <i class="fas fa-clock text-warning"></i> Business Hours
+                        </div>
+                        <div class="comparison-cell torridwave">
+                            <i class="fas fa-clock text-success"></i> 24/7 Support
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>What Our Clients Say</h2>
+                <p>Trusted by businesses worldwide for Microsoft SharePoint solutions</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item active">
+                    <div class="service-card card-hover text-center">
+                        <div class="testimonial-avatar mb-3">
+                            <i class="fas fa-user-circle" style="font-size: 4rem; color: var(--primary-color);"></i>
+                        </div>
+                        <p class="testimonial-text mb-3">
+                            "TorridWave transformed our SharePoint infrastructure completely. Their Power Apps solutions
+                            have increased our productivity by 40%. Highly recommended!"
+                        </p>
+                        <h4 class="testimonial-author">John Smith</h4>
+                        <p class="testimonial-role text-muted">CEO, TechCorp Inc.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="service-card card-hover text-center">
+                        <div class="testimonial-avatar mb-3">
+                            <i class="fas fa-user-circle" style="font-size: 4rem; color: var(--primary-color);"></i>
+                        </div>
+                        <p class="testimonial-text mb-3">
+                            "The Power BI dashboards created by TorridWave have revolutionized our data analytics.
+                            We can now make data-driven decisions in real-time."
+                        </p>
+                        <h4 class="testimonial-author">Sarah Johnson</h4>
+                        <p class="testimonial-role text-muted">CTO, DataSolutions Ltd.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="service-card card-hover text-center">
+                        <div class="testimonial-avatar mb-3">
+                            <i class="fas fa-user-circle" style="font-size: 4rem; color: var(--primary-color);"></i>
+                        </div>
+                        <p class="testimonial-text mb-3">
+                            "Outstanding SPFx development work! TorridWave delivered exactly what we needed, on time
+                            and within budget. Their team is professional and knowledgeable."
+                        </p>
+                        <h4 class="testimonial-author">Michael Chen</h4>
+                        <p class="testimonial-role text-muted">IT Director, Global Enterprises</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta" id="stickyMobileCTA">
+        <a href="contact.html" class="btn btn-primary">Get Started</a>
+        <a href="tel:+918200774733" class="btn btn-outline">Call Now</a>
+    </div>
+
+    <!-- Portfolio Preview Section -->
+    <section id="portfolio" class="section bg-light">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Our Portfolio</h2>
+                <p>Showcasing our best work and successful projects</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4 reveal stagger-1">
+                    <div class="service-card card-hover">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop"
+                            alt="Project 1" class="img-fluid rounded mb-3">
+                        <h3>Enterprise Intranet Portal</h3>
+                        <p>A comprehensive e-commerce solution with advanced features and seamless user experience.</p>
+                        <a href="portfolio.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 reveal stagger-2">
+                    <div class="service-card card-hover">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=800&fit=crop"
+                            alt="Project 2" class="img-fluid rounded mb-3">
+                        <h3>Real-time Sales Analytics</h3>
+                        <p>Secure and user-friendly mobile banking application with cutting-edge security features.</p>
+                        <a href="portfolio.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 reveal stagger-3">
+                    <div class="service-card card-hover">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop"
+                            alt="Project 3" class="img-fluid rounded mb-3">
+                        <h3>Custom SPFx Web Parts Suite</h3>
+                        <p>Real-time analytics dashboard for enterprise-level data visualization and insights.</p>
+                        <a href="portfolio.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="portfolio.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="section bg-gradient text-white">
+        <div class="container text-center">
+            <div class="reveal">
+                <h2 class="display-4 mb-3">Ready to Get Started?</h2>
+                <p class="lead mb-4">
+                    Let's work together to transform your business with Microsoft SharePoint and Power Platform
+                    solutions.
+                    Contact us today and discover how we can help drive your digital transformation.
+                </p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-outline btn-lg">Contact Us Now</a>
+                    <a href="services.html" class="btn btn-primary btn-lg">View Our Services</a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Scroll to Top Button
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    Scroll to Top Button 
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button> -->
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">TorridWave</h3>
+                    <p class="footer-description">We specialize in Microsoft SharePoint and Power Platform solutions.
+                        Creating innovative products and services that transform businesses with Power Apps, Power BI,
+                        SPFx, Power Automate, and more.</p>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                                                <li><a href="service-support.html">Support</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-powerapps.html">Power Apps</a></li>
+                        <li><a href="service-powerbi.html">Power BI</a></li>
+                        <li><a href="service-spfx.html">SPFx Development</a></li>
+                        <li><a href="service-power-automate.html">Power Automate</a></li>
+                        <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
+                        <li><a href="service-workflow.html">Workflow Solutions</a></li>
+                        <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>J.K. Park A-2, Raiya Road</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 8200774733</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@torridwave.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Fri: 9:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> TorridWave. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/interactive-features.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/include-header.js"></script>
+
+    <script>
+        // Show sticky mobile CTA on scroll
+        window.addEventListener('scroll', function () {
+            const stickyCTA = document.getElementById('stickyMobileCTA');
+            if (stickyCTA && window.innerWidth <= 768) {
+                if (window.pageYOffset > 500) {
+                    stickyCTA.classList.add('show');
+                } else {
+                    stickyCTA.classList.remove('show');
+                }
+            }
+        });
+    </script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Update current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Navigation functionality
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+
+                // Close all dropdowns when mobile menu closes
+                if (!navMenu.classList.contains('active')) {
+                    document.querySelectorAll('.has-dropdown').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        }
+
+        // Initialize dropdowns
+        initDropdowns();
+
+        // Reinitialize on window resize
+        let resizeTimer;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                initDropdowns();
+            }, 250);
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        // Get saved theme or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        if (themeIcon) {
+            if (savedTheme === 'dark') {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function () {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                if (themeIcon) {
+                    if (newTheme === 'dark') {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                }
+            });
+        }
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        if (scrollToTopBtn) {
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Make Services link work properly
+        document.addEventListener('DOMContentLoaded', function () {
+            const servicesLink = document.querySelector('a[href="services.html"]');
+            if (servicesLink) {
+                // Remove any existing click handlers
+                servicesLink.replaceWith(servicesLink.cloneNode(true));
+
+                const newLink = document.querySelector('a[href="services.html"]');
+
+                newLink.addEventListener('click', function (e) {
+                    // Only prevent default on desktop when we want to show dropdown
+                    if (window.innerWidth > 768) {
+                        e.preventDefault();
+                        const dropdown = this.closest('.has-dropdown');
+                        if (dropdown) {
+                            dropdown.classList.toggle('active');
+                            const chevron = dropdown.querySelector('.fa-chevron-down');
+                            if (chevron) {
+                                if (dropdown.classList.contains('active')) {
+                                    chevron.classList.add('rotate');
+                                } else {
+                                    chevron.classList.remove('rotate');
+                                }
+                            }
+                        }
+                    }
+                    // On mobile, the link will navigate to services.html
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

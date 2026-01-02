@@ -1,0 +1,666 @@
+/* ============================================
+   TORRIDWAVE - INTERACTIVE FEATURES CSS
+   ============================================ */
+
+/* 1. PRELOADER */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d46300 0%, #31c7f1dd 100%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.preloader-content {
+    text-align: center;
+    color: white;
+}
+
+/* .preloader-logo {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.preloader-text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+} */
+.preloader-image {
+    width: 300px;
+    max-width: 85%;
+    height: auto;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+/* .preloader-progress {
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+} */
+
+.preloader-bar {
+    height: 100%;
+    background: white;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* 2. SCROLL PROGRESS BAR */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0078d4 0%, #00bcf2 100%);
+    width: 0%;
+    transition: width 0.1s ease;
+    box-shadow: 0 0 10px rgba(0, 120, 212, 0.5);
+}
+
+/* 3. FLOATING ACTION BUTTONS */
+.fab-btn {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 998;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.fab-whatsapp {
+    background: #25D366;
+    bottom: 100px;
+    right: 30px;
+}
+
+.fab-call {
+    background: #0078d4;
+    bottom: 30px;
+    right: 30px;
+}
+
+.fab-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .fab-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .fab-whatsapp {
+        bottom: 80px;
+        right: 20px;
+    }
+    .fab-call {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* 4. GRADIENT BLOBS */
+.gradient-blob {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatBlob {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+}
+
+/* 5. SCROLL ANIMATIONS */
+.animate-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 6. RIPPLE EFFECT */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: rippleAnimation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes rippleAnimation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.service-card, .btn, .nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 7. CUSTOM CURSOR */
+.custom-cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #0078d4;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+    transform: scale(2);
+    background: #00bcf2;
+}
+
+.cursor-follower {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(0, 120, 212, 0.5);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.3s ease;
+}
+
+.cursor-follower.hover {
+    transform: scale(1.5);
+    border-color: #00bcf2;
+}
+
+@media (max-width: 768px) {
+    .custom-cursor, .cursor-follower {
+        display: none;
+    }
+}
+
+/* 8. PAGE TRANSITION */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0078d4 0%, #00bcf2 100%);
+    z-index: 9999;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: pageTransitionOut 0.3s ease-out forwards;
+}
+
+@keyframes pageTransitionOut {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* 9. TESTIMONIALS SLIDER */
+.testimonials-slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.testimonial-item {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+}
+
+.testimonial-item.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 10. STICKY MOBILE CTA */
+.sticky-mobile-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0078d4 0%, #00bcf2 100%);
+    padding: 1rem;
+    text-align: center;
+    z-index: 997;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-mobile-cta.show {
+    transform: translateY(0);
+}
+
+.sticky-mobile-cta .btn {
+    margin: 0 0.5rem;
+    padding: 12px 30px;
+}
+
+@media (min-width: 769px) {
+    .sticky-mobile-cta {
+        display: none;
+    }
+}
+
+/* 11. 3D TILT EFFECT */
+.service-card, .card-hover {
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+}
+
+/* 12. LOADING SCREEN */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.loading-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0078d4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 13. SCROLL SNAP */
+.scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.scroll-snap-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+}
+
+/* 14. ENHANCED BUTTON ANIMATIONS */
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animated::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-animated:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* 15. TEXT REVEAL ANIMATION */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: textReveal 0.8s ease-out forwards;
+}
+
+@keyframes textReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 16. MICROSOFT SERVICES ICONS SECTION */
+.microsoft-services-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.microsoft-services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(0,120,212,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.microsoft-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.microsoft-service-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    padding: 30px 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+.microsoft-service-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.microsoft-service-icon:hover::before {
+    opacity: 1;
+}
+
+.microsoft-service-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.microsoft-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible;
+    backdrop-filter: blur(10px);
+}
+
+.microsoft-service-icon:hover .microsoft-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(0, 120, 212, 0.25);
+}
+
+.microsoft-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.microsoft-service-icon:hover .microsoft-icon-wrapper::after {
+    opacity: 1;
+}
+
+.microsoft-icon-wrapper img,
+.microsoft-icon-wrapper .icon-svg {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.icon-powerbi .microsoft-icon-wrapper .icon-svg {
+    filter: brightness(0) invert(0);
+}
+
+.microsoft-service-icon:hover .microsoft-icon-wrapper img,
+.microsoft-service-icon:hover .microsoft-icon-wrapper .icon-svg {
+    transform: scale(1.1);
+}
+
+.microsoft-service-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-top: 12px;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.3px;
+}
+
+.microsoft-service-icon:hover .microsoft-service-name {
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Office 365 Icon */
+.icon-office365 {
+    background: linear-gradient(180deg, #ea4300 0%, #ff6b35 100%);
+    color: white;
+}
+
+.icon-office365 .microsoft-icon-wrapper {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* SharePoint Icon */
+.icon-sharepoint {
+    background: linear-gradient(180deg, #0078d4 0%, #00bcf2 100%);
+    color: white;
+}
+
+.icon-sharepoint .microsoft-icon-wrapper {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Power Apps Icon */
+.icon-powerapps {
+    background: linear-gradient(180deg, #742774 0%, #9a4d9a 100%);
+    color: white;
+}
+
+.icon-powerapps .microsoft-icon-wrapper {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Power Automate Icon */
+.icon-powerautomate {
+    background: linear-gradient(180deg, #0066ff 0%, #00a8ff 100%);
+    color: white;
+}
+
+.icon-powerautomate .microsoft-icon-wrapper {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Power BI Icon */
+.icon-powerbi {
+    background: linear-gradient(180deg, #f2c811 0%, #f9d649 100%);
+    color: #333;
+}
+
+.icon-powerbi .microsoft-icon-wrapper {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.icon-powerbi .microsoft-service-name {
+    color: #1a1a1a;
+}
+
+/* Microsoft Forms Icon */
+.icon-forms {
+    background: linear-gradient(180deg, #00bcf2 0%, #4dd0e1 100%);
+    color: white;
+}
+
+.icon-forms .microsoft-icon-wrapper {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Workflow Icon */
+.icon-workflow {
+    background: linear-gradient(180deg, #0078d4 0%, #005a9e 100%);
+    color: white;
+}
+
+.icon-workflow .microsoft-icon-wrapper {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* SPFx Icon */
+.icon-spfx {
+    background: linear-gradient(180deg, #00a4ef 0%, #0078d4 100%);
+    color: white;
+}
+
+.icon-spfx .microsoft-icon-wrapper {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .microsoft-services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+        padding: 20px 15px;
+    }
+    
+    .microsoft-icon-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .microsoft-icon-wrapper img,
+    .microsoft-icon-wrapper .icon-svg {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .microsoft-service-name {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .microsoft-services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .microsoft-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .microsoft-icon-wrapper img,
+    .microsoft-icon-wrapper .icon-svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy - Torridwave Technologies. Learn how we collect, use, and protect your personal information.">
+    <title>Privacy Policy - Torridwave Technologies</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/premium-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/interactive-features.css">
+    
+    <style>
+        /* Premium Privacy Policy Styles */
+        .privacy-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            position: relative;
+            padding: 160px 0 100px;
+            overflow: hidden;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .privacy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&auto=format&fit=crop') center/cover;
+            opacity: 0.15;
+            filter: blur(2px);
+        }
+
+        .privacy-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.85) 50%, rgba(15, 52, 96, 0.9) 100%);
+        }
+
+        .privacy-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .privacy-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(255, 249, 249, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .breadcrumb-nav {
+            position: relative;
+            z-index: 2;
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .breadcrumb-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: white;
+        }
+
+        .breadcrumb-nav span {
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+
+        .privacy-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .privacy-section {
+            margin-bottom: 4rem;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 5px solid transparent;
+        }
+
+        .privacy-section:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            border-left-color: #667eea;
+        }
+
+        .privacy-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a1a2e;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .privacy-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .privacy-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        .privacy-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .privacy-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .privacy-section li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1rem;
+        }
+
+        .privacy-section ol {
+            padding-left: 2rem;
+        }
+
+        .privacy-section ol li {
+            padding-left: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section ol li::before {
+            display: none;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            margin-bottom: 3rem;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-box a:hover {
+            opacity: 0.8;
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .privacy-section {
+                padding: 1.5rem;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="privacy-hero">
+        <div class="floating-particles">
+            <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="top: 40%; left: 80%; animation-delay: 2s;"></div>
+            <div class="particle" style="top: 60%; left: 30%; animation-delay: 4s;"></div>
+            <div class="particle" style="top: 80%; left: 70%; animation-delay: 6s;"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="privacy-hero-content">
+                        <h1 data-aos="fade-down">Privacy Policy</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="breadcrumb-nav" data-aos="fade-left">
+                        <a href="index.html">Home</a>
+                        <span>></span>
+                        <span>Privacy Policy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Privacy Policy Content -->
+    <section class="privacy-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="intro-text" data-aos="fade-up">
+                <p>
+                    Thank you for visiting Torridwave. Your privacy is important to us, we will collect no personally identifiable information about you when you visit the Web Site unless you choose to provide that information.
+                </p>
+            </div>
+
+            <!-- What information does Torridwave gather? -->
+            <div class="privacy-section" data-aos="fade-up" data-aos-delay="100">
+                <h2><i class="fas fa-info-circle me-2"></i>What information does Torridwave gather?</h2>
+                <ul>
+                    <li>While requesting information, we will ask you to provide basic contact information.</li>
+                    <li>Torridwave Technologies uses common internet technologies, such as cookies, to anonymously manage aggregated in-app usage patterns to provide the best possible experience with the app</li>
+                    <li>Torridwave Technologies basic anonymized usage statistics for the subscription/licensing track.</li>
+                </ul>
+            </div>
+
+            <!-- How do we use your information? -->
+            <div class="privacy-section" data-aos="fade-up" data-aos-delay="200">
+                <h2><i class="fas fa-shield-alt me-2"></i>How do we use your information?</h2>
+                <ol>
+                    <li>We also may use the data to communicate with you, during support consulting or troubleshooting sessions and share new product updates with you.</li>
+                    <li>However, we do not use what you say in email, chat, video calls, or voice mail, or your documents, photos, or other personal files to target third-party ads to you.</li>
+                    <li>As you are our valuable customer, we may use your organization name and logo on our customer list.</li>
+                </ol>
+            </div>
+
+            <!-- Governing Law and Jurisdiction -->
+            <div class="privacy-section" data-aos="fade-up" data-aos-delay="300">
+                <h2><i class="fas fa-balance-scale me-2"></i>Governing Law and Jurisdiction</h2>
+                <p>
+                    This Privacy Policy constitutes a contract made under and shall be governed by and construed by the laws of India.
+                </p>
+            </div>
+
+            <!-- Storing Your Personal Data -->
+            <div class="privacy-section" data-aos="fade-up" data-aos-delay="400">
+                <h2><i class="fas fa-database me-2"></i>Storing Your Personal Data</h2>
+                <p>
+                    Unfortunately, sending of information via the Internet is not totally secure and on event such information can be intercepted. We cannot guarantee the security of your data that you decide to send us electronically, sending such information is entirely at your own risk.
+                </p>
+            </div>
+
+            <!-- Disclosing Your Information -->
+            <div class="privacy-section" data-aos="fade-up" data-aos-delay="500">
+                <h2><i class="fas fa-lock me-2"></i>Disclosing Your Information</h2>
+                <p>We will not disclose your personal information to any other parties other than in agreement with this Privacy Policy and in the conditions below:</p>
+                <ol>
+                    <li>We sell our business to buyer.</li>
+                    <li>We are legally necessitate by law to disclose your personal information.</li>
+                </ol>
+            </div>
+
+            <!-- Your acceptance of these terms -->
+            <div class="privacy-section" data-aos="fade-up" data-aos-delay="600">
+                <h2><i class="fas fa-check-circle me-2"></i>Your acceptance of these terms</h2>
+                <p>
+                    By using this Site, Add-ins, Apps and services from Torridwave you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site, Add-ins, Apps or services from Torridwave. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes.
+                </p>
+            </div>
+
+            <!-- Contacting us -->
+            <div class="privacy-section" data-aos="fade-up" data-aos-delay="700">
+                <h2><i class="fas fa-envelope me-2"></i>Contacting us</h2>
+                <p>
+                    If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at: <a href="mailto:contact@torridwave.com" style="color: #667eea; font-weight: 600;">contact@torridwave.com</a>
+                </p>
+            </div>
+
+            <!-- Contact Box -->
+            <div class="contact-box" data-aos="zoom-in" data-aos-delay="800">
+                <h3><i class="fas fa-headset me-2"></i>Have Questions?</h3>
+                <p>If you have any questions about our Privacy Policy, feel free to reach out to us.</p>
+                <p style="margin-top: 1rem;">
+                    <a href="mailto:contact@torridwave.com">contact@torridwave.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">TorridWave</h3>
+                    <p class="footer-description">Torridwave is a leading tech-savvy company with its core focus on offering web development using SharePoint and related technologies and process automation services to clients across the globe.</p>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-powerapps.html">Power Apps</a></li>
+                        <li><a href="service-powerbi.html">Power BI</a></li>
+                        <li><a href="service-spfx.html">SPFx Development</a></li>
+                        <li><a href="service-power-automate.html">Power Automate</a></li>
+                        <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
+                        <li><a href="service-workflow.html">Workflow Solutions</a></li>
+                        <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Get in Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>J.K. Park A-2, Raiya Road</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 8200774733</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@torridwave.com</span></li>
+                        <li><i class="fas fa-globe"></i> <span>www.torridwave.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; Copyright Torridwave Technologies 2023. All Rights Reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/interactive-features.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/include-header.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.privacy-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

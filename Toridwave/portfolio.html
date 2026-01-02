@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TorridWave Portfolio - View our successful Microsoft SharePoint & Power Platform projects">
+    <title>Portfolio - TorridWave | Microsoft SharePoint Experts</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+
+
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/interactive-features.css">
+    <link rel="stylesheet" href="css/premium-styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <style>
+        /* Portfolio Hero */
+        .portfolio-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+        }
+
+        .portfolio-hero .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .portfolio-hero .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-hero .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-hero .hero-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        /* Category Filter */
+        .project-category {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 40px 0;
+            padding: 20px 0;
+        }
+
+        .category-btn {
+            padding: 12px 28px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(102, 126, 234, 0.1);
+        }
+
+        .category-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .category-btn.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Portfolio Grid Layout */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card .project-image {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .project-card .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.9));
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-image-overlay {
+            opacity: 1;
+        }
+
+        .view-details-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .view-details-btn:hover {
+            background: #5a6fd8;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .project-content .project-category-label {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .project-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        /* Technology Tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        /* Project Meta Info */
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+
+        .project-client {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .project-client strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .project-duration {
+            background: #f8f9fa;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Stats Section */
+        .portfolio-stats {
+            background: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-item h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-item p {
+            color: #666;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* Technologies Section */
+        .technologies-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tech-item {
+            text-align: center;
+            width: 120px;
+        }
+
+        .tech-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-item h6 {
+            font-weight: 600;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* CTA Section */
+        .portfolio-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .portfolio-cta h2 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .portfolio-cta .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 10px;
+            border-radius: 30px;
+        }
+
+        /* Animation for Project Cards */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Filter Animation */
+        .filtering .project-card {
+            animation: fadeInUp 0.4s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .portfolio-hero {
+                padding: 120px 0 60px;
+            }
+
+            .portfolio-hero .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 25px;
+            }
+
+            .project-category {
+                gap: 10px;
+            }
+
+            .category-btn {
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-hero .hero-title {
+                font-size: 2.3rem;
+            }
+
+            .portfolio-hero .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .project-category {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-btn {
+                width: 200px;
+                text-align: center;
+            }
+
+            .stat-item h2 {
+                font-size: 2.8rem;
+            }
+
+            .portfolio-cta h2 {
+                font-size: 2.2rem;
+            }
+
+            .portfolio-cta .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-hero {
+                padding: 100px 0 40px;
+            }
+
+            .portfolio-hero .hero-title {
+                font-size: 2rem;
+            }
+
+            .project-card .project-image {
+                height: 200px;
+            }
+
+            .project-content {
+                padding: 20px;
+            }
+
+            .project-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .project-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .technologies-grid {
+                gap: 20px;
+            }
+
+            .tech-item {
+                width: 100px;
+            }
+
+            .tech-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 28px;
+            }
+        }
+
+        /* Floating Shapes */
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-shapes .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .floating-shapes .shape-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+        }
+
+        .floating-shapes .shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="portfolio-hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content text-center text-white">
+                <h1 class="hero-title">Our Portfolio</h1>
+                <p class="hero-subtitle">Microsoft SharePoint & Power Platform Projects</p>
+                <p class="hero-description">
+                    Explore our successful Microsoft 365 implementations, custom Power Apps solutions,
+                    SPFx developments, and workflow automations for businesses worldwide.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Categories -->
+    <section class="section pt-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Browse By Category</h2>
+                <p>Filter projects based on Microsoft technologies</p>
+            </div>
+
+            <div class="project-category">
+                <button class="category-btn active" data-category="all">All Projects</button>
+                <button class="category-btn" data-category="powerapps">Power Apps</button>
+                <button class="category-btn" data-category="sharepoint">SharePoint</button>
+                <button class="category-btn" data-category="powerbi">Power BI</button>
+                <button class="category-btn" data-category="spfx">SPFx</button>
+                <button class="category-btn" data-category="workflow">Workflow</button>
+                <button class="category-btn" data-category="powerautomate">Power Automate</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Project 1: SharePoint Intranet -->
+                <div class="project-card" data-category="sharepoint">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop"
+                            alt="SharePoint Intranet">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Enterprise Intranet Portal</h3>
+                        <span class="project-category-label">SharePoint Online Implementation</span>
+                        <p>
+                            Complete intranet solution with document management, news center,
+                            employee directory, and collaboration spaces for a 5000+ employee organization.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">SharePoint Online</span>
+                            <span class="tech-tag">Modern Pages</span>
+                            <span class="tech-tag">Hub Sites</span>
+                            <span class="tech-tag">Microsoft Teams</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> Global Manufacturing Corp
+                            </div>
+                            <div class="project-duration">
+                                6 Months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Power Apps Inventory Management -->
+                <div class="project-card" data-category="powerapps">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+                            alt="Inventory Management App">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Inventory Management System</h3>
+                        <span class="project-category-label">Power Apps Canvas & Model-Driven</span>
+                        <p>
+                            Mobile-first inventory tracking solution with barcode scanning,
+                            real-time stock updates, and automated reorder alerts.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">Dataverse</span>
+                            <span class="tech-tag">Mobile App</span>
+                            <span class="tech-tag">Offline Support</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> Retail Chain Inc.
+                            </div>
+                            <div class="project-duration">
+                                3 Months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Power BI Sales Dashboard -->
+                <div class="project-card" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+                            alt="Sales Analytics Dashboard">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Real-time Sales Analytics</h3>
+                        <span class="project-category-label">Power BI Dashboards & Reports</span>
+                        <p>
+                            Interactive dashboard with sales forecasting, customer segmentation,
+                            and performance metrics across multiple regions.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">DAX Queries</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Azure Synapse</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> National Sales Corp
+                            </div>
+                            <div class="project-duration">
+                                2 Months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: SPFx Custom Web Parts -->
+                <div class="project-card" data-category="spfx">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&h=600&fit=crop"
+                            alt="SPFx Web Parts">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Custom SPFx Web Parts Suite</h3>
+                        <span class="project-category-label">SharePoint Framework Development</span>
+                        <p>
+                            Collection of 15+ custom web parts including calendar, task manager,
+                            announcement board, and document preview components.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">SPFx</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">PnP JS</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> Financial Services Ltd.
+                            </div>
+                            <div class="project-duration">
+                                4 Months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Power Automate Workflows -->
+                <div class="project-card" data-category="powerautomate">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
+                            alt="Workflow Automation">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Document Approval Automation</h3>
+                        <span class="project-category-label">Power Automate Workflows</span>
+                        <p>
+                            Automated document approval process with email notifications,
+                            conditional routing, and integration with SharePoint lists.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">Approval Flows</span>
+                            <span class="tech-tag">SharePoint Lists</span>
+                            <span class="tech-tag">Microsoft Teams</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> Healthcare Organization
+                            </div>
+                            <div class="project-duration">
+                                1 Month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: SharePoint Migration -->
+                <div class="project-card" data-category="sharepoint">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+                            alt="SharePoint Migration">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SharePoint 2013 to Online Migration</h3>
+                        <span class="project-category-label">SharePoint Migration Project</span>
+                        <p>
+                            Migrated 500GB+ of data from on-premises SharePoint 2013 to
+                            SharePoint Online with zero downtime and complete metadata retention.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">SharePoint Migration</span>
+                            <span class="tech-tag">SharePoint Online</span>
+                            <span class="tech-tag">SPMT</span>
+                            <span class="tech-tag">Content Migration</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> Education Institute
+                            </div>
+                            <div class="project-duration">
+                                3 Months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Microsoft Forms + Power Automate -->
+                <div class="project-card" data-category="workflow">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop"
+                            alt="Forms Workflow">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Employee Onboarding System</h3>
+                        <span class="project-category-label">Microsoft Forms + Power Automate</span>
+                        <p>
+                            Automated onboarding process with Forms for data collection,
+                            Power Automate for workflow, and SharePoint for document storage.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Microsoft Forms</span>
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">HR Automation</span>
+                            <span class="tech-tag">SharePoint Lists</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> IT Services Company
+                            </div>
+                            <div class="project-duration">
+                                2 Months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Power Apps Field Service -->
+                <div class="project-card" data-category="powerapps">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+                            alt="Field Service App">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Field Service Management</h3>
+                        <span class="project-category-label">Power Apps + Power BI</span>
+                        <p>
+                            Mobile app for field technicians with work order management,
+                            GPS tracking, parts inventory, and customer signature capture.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">GPS Integration</span>
+                            <span class="tech-tag">Offline Mode</span>
+                            <span class="tech-tag">Power BI Reporting</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> Maintenance Services Co.
+                            </div>
+                            <div class="project-duration">
+                                4 Months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: SharePoint Document Management -->
+                <div class="project-card" data-category="sharepoint">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+                            alt="Document Management">
+                        <div class="project-image-overlay">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Enterprise Document Management</h3>
+                        <span class="project-category-label">SharePoint + Metadata Management</span>
+                        <p>
+                            Advanced document management system with version control,
+                            metadata tagging, retention policies, and eDiscovery capabilities.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">SharePoint</span>
+                            <span class="tech-tag">Document Libraries</span>
+                            <span class="tech-tag">Metadata</span>
+                            <span class="tech-tag">Retention Policies</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-client">
+                                <strong>Client:</strong> Law Firm Partners
+                            </div>
+                            <div class="project-duration">
+                                5 Months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="portfolio-stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h2 class="display-4" data-count="150">0</h2>
+                        <p>Power Apps Built</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h2 class="display-4" data-count="80">0</h2>
+                        <p>SharePoint Implementations</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h2 class="display-4" data-count="200">0</h2>
+                        <p>Power BI Dashboards</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h2 class="display-4" data-count="300">0</h2>
+                        <p>Workflows Automated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Technologies We Use</h2>
+                <p>Expertise across the Microsoft Power Platform ecosystem</p>
+            </div>
+
+            <div class="technologies-grid">
+                <div class="tech-item">
+                    <div class="tech-icon" style="background: linear-gradient(135deg, #00bc70 0%, #009c5c 100%);">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h6>Power Apps</h6>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon" style="background: linear-gradient(135deg, #f2c811 0%, #e6b400 100%);">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h6>Power BI</h6>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon" style="background: linear-gradient(135deg, #4c7beb 0%, #305fc9 100%);">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h6>SPFx</h6>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon" style="background: linear-gradient(135deg, #4ca1e0 0%, #2a87c8 100%);">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h6>Power Automate</h6>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon" style="background: linear-gradient(135deg, #7b5ba6 0%, #5d408a 100%);">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h6>SharePoint</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="portfolio-cta">
+        <div class="container text-center">
+            <div>
+                <h2 class="display-4 mb-3">Ready to Start Your Project?</h2>
+                <p class="lead mb-4">
+                    Let's build your next SharePoint or Power Platform solution together.
+                    Contact us for a free consultation.
+                </p>
+                <a href="contact.html" class="btn btn-outline-light btn-lg me-3">Get Free Consultation</a>
+                <a href="tel:+15551234567" class="btn btn-light btn-lg">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">TorridWave</h3>
+                    <p class="footer-description">We specialize in Microsoft SharePoint and Power Platform solutions.
+                        Creating innovative products and services that transform businesses with Power Apps, Power BI,
+                        SPFx, Power Automate, and more.</p>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="service-support.html">Support</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-powerapps.html">Power Apps</a></li>
+                        <li><a href="service-powerbi.html">Power BI</a></li>
+                        <li><a href="service-spfx.html">SPFx Development</a></li>
+                        <li><a href="service-power-automate.html">Power Automate</a></li>
+                        <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
+                        <li><a href="service-workflow.html">Workflow Solutions</a></li>
+                        <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>J.K. Park A-2, Raiya Road</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 8200774733</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@torridwave.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Fri: 9:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> TorridWave. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/interactive-features.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/include-header.js"></script>
+
+    <script>
+        // Initialize AOS
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out',
+                once: true,
+                offset: 100
+            });
+        }
+
+        // Update current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Portfolio Filtering
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            const portfolioGrid = document.getElementById('portfolioGrid');
+
+            // Set animation delays for initial load
+            projectCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.style.animationFillMode = 'forwards';
+            });
+
+            // Filter projects
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+
+                    // Add filtering animation class
+                    if (portfolioGrid) {
+                        portfolioGrid.classList.add('filtering');
+                    }
+
+                    // Filter projects with animation
+                    projectCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            if (category === 'all' || card.getAttribute('data-category') === category) {
+                                card.style.display = 'block';
+                                card.style.animation = 'fadeInUp 0.4s ease forwards';
+                                card.style.animationDelay = '0s';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }, index * 30);
+                    });
+
+                    // Remove animation class after filtering
+                    setTimeout(() => {
+                        if (portfolioGrid) {
+                            portfolioGrid.classList.remove('filtering');
+                        }
+                    }, 500);
+                });
+            });
+
+            // View Details Button Click
+            document.querySelectorAll('.view-details-btn').forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const projectCard = this.closest('.project-card');
+                    const projectTitle = projectCard.querySelector('h3').textContent;
+                    const projectDescription = projectCard.querySelector('p').textContent;
+                    const projectClient = projectCard.querySelector('.project-client').textContent;
+                    const projectDuration = projectCard.querySelector('.project-duration').textContent;
+                    const projectImage = projectCard.querySelector('img').src;
+                    const techTags = projectCard.querySelector('.tech-tags').innerHTML;
+
+                    // Create modal
+                    const modalHTML = `
+                        <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">${projectTitle}</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <img src="${projectImage}" 
+                                                     alt="${projectTitle}" class="img-fluid rounded">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Project Details</h6>
+                                                <p>${projectDescription}</p>
+                                                <div class="mt-3">
+                                                    <p><strong>Client:</strong> ${projectClient}</p>
+                                                    <p><strong>Duration:</strong> ${projectDuration}</p>
+                                                    <p><strong>Technologies:</strong></p>
+                                                    <div class="tech-tags">
+                                                        ${techTags}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <a href="contact.html" class="btn btn-primary">Start Similar Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    // Remove existing modal if any
+                    const existingModal = document.getElementById('projectModal');
+                    if (existingModal) existingModal.remove();
+
+                    // Add new modal
+                    document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+                    // Initialize and show modal
+                    const projectModal = new bootstrap.Modal(document.getElementById('projectModal'));
+                    projectModal.show();
+                });
+            });
+            // Navigation functionality
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+
+                    // Close all dropdowns when mobile menu closes
+                    if (!navMenu.classList.contains('active')) {
+                        document.querySelectorAll('.has-dropdown').forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                });
+            }
+
+            // Counter Animation
+            function animateCounters() {
+                const counters = document.querySelectorAll('[data-count]');
+                const speed = 200;
+
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-count');
+                        const count = +counter.innerText;
+                        const increment = Math.ceil(target / speed);
+
+                        if (count < target) {
+                            counter.innerText = count + increment;
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+
+                    updateCount();
+                });
+            }
+
+            // Trigger counters when in viewport
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const statsSection = document.querySelector('.portfolio-stats');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+
+            // Navigation Dropdown
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                const chevron = dropdown.querySelector('.fa-chevron-down');
+
+                if (link) {
+                    link.addEventListener('click', function (e) {
+                        // Mobile में सीधे पेज पर जाए
+                        if (window.innerWidth <= 768) {
+                            return; // Allow default behavior
+                        }
+
+                        // Desktop में ड्रॉपडाउन दिखाए
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        // सभी दूसरे ड्रॉपडाउन बंद करे
+                        dropdowns.forEach(d => {
+                            if (d !== dropdown) {
+                                d.classList.remove('active');
+                                const otherChevron = d.querySelector('.fa-chevron-down');
+                                if (otherChevron) {
+                                    otherChevron.style.transform = 'rotate(0deg)';
+                                }
+                            }
+                        });
+
+                        // इस ड्रॉपडाउन को toggle करे
+                        dropdown.classList.toggle('active');
+
+                        // चेवरॉन rotate करे
+                        if (chevron) {
+                            if (dropdown.classList.contains('active')) {
+                                chevron.style.transform = 'rotate(180deg)';
+                            } else {
+                                chevron.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+                }
+            });
+
+            // डॉक्यूमेंट पर क्लिक करने से ड्रॉपडाउन बंद हो
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.has-dropdown')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                        const chevron = dropdown.querySelector('.fa-chevron-down');
+                        if (chevron) {
+                            chevron.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                }
+            });
+        }); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact TorridWave - Professional Microsoft Power Platform Solutions and Consultation">
+    <title>Contact Us | Microsoft Power Platform Experts - TorridWave</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/premium-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/interactive-features.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <!-- Professional Contact Page Styles -->
+    <style>
+        /* Professional Contact Layout */
+        .professional-contact {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .contact-hero-section {
+            background: linear-gradient(135deg, #0078d4 0%, #005ba9 100%);
+            color: white;
+            padding: 120px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.08" d="M0,224L48,218.7C96,213,192,203,288,181.3C384,160,480,128,576,138.7C672,149,768,203,864,208C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            margin: 60px 0;
+        }
+
+        @media (max-width: 1200px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Contact Information Panel */
+        .contact-info-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -o-crisp-edges;
+            image-rendering: pixelated;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #0078d4 0%, #00a98f 25%, #f2c811 50%, #742774 75%, #e81123 100%);
+        }
+
+        .company-highlight {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .company-highlight .logo-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .company-highlight h3 {
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .company-highlight p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Contact Items */
+        .contact-info-items {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            border-color: #0078d4;
+            box-shadow: 0 10px 30px rgba(0, 120, 212, 0.1);
+            background: white;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0078d4 0%, #005ba9 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-icon i {
+            font-size: 20px;
+            color: white;
+        }
+
+        .contact-content h5 {
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .contact-content p,
+        .contact-content a {
+            color: #555;
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .contact-content a {
+            color: #0078d4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-content a:hover {
+            color: #005ba9;
+        }
+
+        /* Business Hours */
+        .business-hours {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #eaeaea;
+        }
+
+        .business-hours h5 {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hour-item:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            color: #555;
+            font-weight: 500;
+        }
+
+        .time {
+            color: #0078d4;
+            font-weight: 500;
+        }
+
+        /* Contact Form Panel */
+        .contact-form-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .form-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .form-header h2 {
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        .form-header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Professional Form Styles */
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-label.required::after {
+            content: '*';
+            color: #e81123;
+            margin-left: 4px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 15px;
+            color: #333;
+            background: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #0078d4;
+            box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.1);
+        }
+
+        .form-control.error {
+            border-color: #e81123;
+        }
+
+        .form-control.success {
+            border-color: #107c10;
+        }
+
+        .error-message {
+            color: #e81123;
+            font-size: 13px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-control:focus+.form-icon {
+            color: #0078d4;
+        }
+
+        .form-icon {
+            position: absolute;
+            right: 20px;
+            top: 42px;
+            color: #999;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        /* Select Box Styling */
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230078d4' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+            padding-right: 50px;
+        }
+
+        /* Textarea Styling */
+        textarea.form-control {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: linear-gradient(135deg, #0078d4 0%, #005ba9 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 120, 212, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .submit-btn i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Form Status Messages */
+        .form-status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 12px;
+            display: none;
+        }
+
+        .form-status.success {
+            background: rgba(16, 124, 16, 0.1);
+            color: #107c10;
+            border: 1px solid rgba(16, 124, 16, 0.2);
+        }
+
+        .form-status.error {
+            background: rgba(232, 17, 35, 0.1);
+            color: #e81123;
+            border: 1px solid rgba(232, 17, 35, 0.2);
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .trust-icon {
+            color: #107c10;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        .trust-text {
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-hero-section {
+                padding: 100px 0 40px;
+            }
+
+            .contact-layout {
+                gap: 30px;
+                margin: 40px 0;
+            }
+
+            .contact-form-panel,
+            .contact-info-panel {
+                padding: 30px;
+            }
+
+            .form-header h2 {
+                font-size: 28px;
+            }
+
+            .contact-item {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-container {
+                padding: 0 15px;
+            }
+
+            .contact-form-panel,
+            .contact-info-panel {
+                padding: 25px 20px;
+            }
+
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                margin-right: 15px;
+            }
+
+            .contact-icon i {
+                font-size: 16px;
+            }
+
+            .form-header h2 {
+                font-size: 24px;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head><!-- jQuery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<!-- Owl Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<!-- Contact Form -->
+<script src="js/contact-form.js"></script>
+
+<!-- Main JS -->
+<script src="js/main.js"></script>
+<script>
+    (function () {
+        emailjs.init("CdH0ixXeTpAK1sSC7iHJb");
+    })();
+</script>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="contact-hero-section">
+        <div class="container contact-container">
+            <div class="hero-content text-center" data-aos="fade-up">
+                <h1 class="display-4 fw-bold mb-4">Get Expert Consultation</h1>
+                <p class="lead mb-4">Connect with our Microsoft Power Platform specialists for customized solutions that
+                    transform your business.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#contact-form" class="btn btn-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-calendar-check me-2"></i>Schedule Meeting
+                    </a>
+                    <a href="tel:+15551234567" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-phone-alt me-2"></i>Call Now: +91 8200774733
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="professional-contact">
+        <div class="container contact-container">
+            <div class="contact-layout">
+                <!-- Contact Information Panel -->
+                <div class="contact-info-panel" data-aos="fade-center">
+                    <div class="company-highlight">
+                        <div class="logo-image-container">
+                            <img src="img/favicon.png" alt="TorridWave Logo" class="logo-image" style="height: 60px; width: auto;">
+                        </div>
+                        <h3>TorridWave Technologies</h3>
+                        <p>Microsoft Gold Partner specializing in Power Platform, SharePoint, and Business Intelligence
+                            solutions.</p>
+                    </div>
+
+                    <div class="contact-info-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5>Corporate Headquarters</h5>
+                                <p>123 Technology Plaza<br>
+                                    Suite 500<br>
+                                    San Francisco, CA 94107<br>
+                                    United States</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5>Phone & Fax</h5>
+                                <p>
+                                    <a href="tel:+15551234567">+91 8200774733</a> (Office)<br>
+                                    <a href="tel:+15551234568">+1 (555) 123-4568</a> (Support)<br>
+                                    Fax: +1 (555) 123-4569
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5>Email Addresses</h5>
+                                <p>
+                                    <a href="mailto:contact@torridwave.com">contact@torridwave.com</a> (General)<br>
+                                    <a href="mailto:sales@torridwave.com">sales@torridwave.com</a> (Sales)<br>
+                                    <a href="mailto:support@torridwave.com">support@torridwave.com</a> (Support)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5>24/7 Support</h5>
+                                <p>
+                                    <a href="mailto:emergency@torridwave.com">emergency@torridwave.com</a><br>
+                                    Response Time: <strong>&lt; 30 minutes</strong><br>
+                                    SLA: 99.9% Uptime Guarantee
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-hours">
+                        <h5>Business Hours</h5>
+                        <div class="hour-item">
+                            <span class="day">Monday - Friday</span>
+                            <span class="time">10:00 AM - 7:00 PM</span>
+                        </div>
+                        <div class="hour-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">12:00 AM - 4:00 PM</span>
+                        </div>
+                        <div class="hour-item">
+                            <span class="day">Sunday</span>
+                            <span class="time">Emergency Support Only</span>
+                        </div>
+                        <div class="hour-item">
+                            <span class="day">Holidays</span>
+                            <span class="time">By Appointment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Panel -->
+                <div class="contact-form-panel" id="contact-form" data-aos="fade-left">
+                    <div class="form-header">
+                        <h2>Request a Consultation</h2>
+                        <p>Complete the form below and our Microsoft Power Platform experts will contact you within 24
+                            hours.</p>
+                    </div>
+
+                    <form id="professionalContactForm" class="professional-contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label required">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName"
+                                        placeholder="Enter your first name" required>
+                                    <i class="fas fa-user form-icon"></i>
+                                    <div class="error-message" id="firstNameError">Please enter your first name</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label required">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName"
+                                        placeholder="Enter your last name" required>
+                                    <i class="fas fa-user form-icon"></i>
+                                    <div class="error-message" id="lastNameError">Please enter your last name</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="form-label required">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="your.email@company.com" required>
+                                    <i class="fas fa-envelope form-icon"></i>
+                                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone"
+                                        placeholder="+91 8200774733">
+                                    <i class="fas fa-phone form-icon"></i>
+                                    <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company" class="form-label required">Company / Organization</label>
+                            <input type="text" class="form-control" id="company" name="company"
+                                placeholder="Your company name" required>
+                            <i class="fas fa-building form-icon"></i>
+                            <div class="error-message" id="companyError">Please enter your company name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="position" class="form-label">Job Title / Position</label>
+                            <input type="text" class="form-control" id="position" name="position"
+                                placeholder="Your position in the company">
+                            <i class="fas fa-briefcase form-icon"></i>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service" class="form-label required">Service Interest</label>
+                            <select class="form-control" id="service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="power-apps">Microsoft Power Apps Development</option>
+                                <option value="power-bi">Power BI Analytics & Dashboards</option>
+                                <option value="power-automate">Power Automate Workflows</option>
+                                <option value="sharepoint">SharePoint Solutions & Migration</option>
+                                <option value="spfx">SPFx Custom Development</option>
+                                <option value="microsoft-forms">Microsoft Forms Integration</option>
+                                <option value="workflow">Business Process Automation</option>
+                                <option value="consulting">Power Platform Consulting</option>
+                                <option value="support">Managed Support Services</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="other">Other (Please specify in message)</option>
+                            </select>
+                            <div class="error-message" id="serviceError">Please select a service</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Project Budget (USD)</label>
+                            <select class="form-control" id="budget" name="budget">
+                                <option value="" selected>Select budget range</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-50k">$25,000 - $50,000</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="100k+">$100,000+</option>
+                                <option value="tbd">To be determined</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label required">Project Details</label>
+                            <textarea class="form-control" id="message" name="message" rows="6"
+                                placeholder="Please describe your project requirements, timeline, and any specific challenges you're facing..."
+                                required></textarea>
+                            <div class="error-message" id="messageError">Please enter your project details</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hearAbout" class="form-label">How did you hear about us?</label>
+                            <select class="form-control" id="hearAbout" name="hearAbout">
+                                <option value="" selected>Select an option</option>
+                                <option value="search">Search Engine (Google, Bing)</option>
+                                <option value="referral">Referral</option>
+                                <option value="social">Social Media</option>
+                                <option value="event">Industry Event</option>
+                                <option value="partner">Microsoft Partner Network</option>
+                                <option value="previous">Previous Client</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-status" id="formStatus"></div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Submit Consultation Request
+                        </button>
+
+                        <div class="trust-indicators">
+                            <div class="trust-item">
+                                <i class="fas fa-shield-alt trust-icon"></i>
+                                <span class="trust-text">Your information is secure and confidential</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-clock trust-icon"></i>
+                                <span class="trust-text">Response within 24 business hours</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-certificate trust-icon"></i>
+                                <span class="trust-text">Microsoft Gold Partner Experts</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">TorridWave</h3>
+                    <p class="footer-description">Microsoft Power Platform and SharePoint experts. We specialize in
+                        Power Apps, Power BI, Power Automate, SPFx, and SharePoint solutions that transform businesses.
+                    </p>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="service-support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Microsoft Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-powerapps.html">Power Apps</a></li>
+                        <li><a href="service-powerbi.html">Power BI</a></li>
+                        <li><a href="service-spfx.html">SPFx Development</a></li>
+                        <li><a href="service-power-automate.html">Power Automate</a></li>
+                        <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
+                        <li><a href="service-workflow.html">Workflow Solutions</a></li>
+                        <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>J.K. Park A-2, Raiya Road</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 8200774733</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@torridwave.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Fri: 9:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> TorridWave. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/interactive-features.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/include-header.js"></script>
+    <script src="js/contact-form.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+        }
+        
+        // Dropdown functionality
+        const dropdowns = document.querySelectorAll('.has-dropdown');
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('.nav-link');
+            if (link) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth > 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+        
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.has-dropdown')) {
+                dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            }
+        });
+        
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        
+        if (themeIcon) {
+            if (savedTheme === 'dark') {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+        
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                
+                if (themeIcon) {
+                    if (newTheme === 'dark') {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                }
+            });
+        }
+        
+        // Contact form submission
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
