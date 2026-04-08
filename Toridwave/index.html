@@ -69,31 +69,6 @@
     }
     </script>
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const serviceItem = document.querySelector(".has-dropdown");
-        const serviceLink = serviceItem.querySelector(".nav-link");
-        const chevron = serviceItem.querySelector(".fa-chevron-down");
-
-        serviceLink.addEventListener("click", function (e) {
-            e.preventDefault(); // pehle navigation roko
-
-            // Toggle dropdown
-            serviceItem.classList.toggle("active");
-
-            if (chevron) {
-                chevron.style.transform = serviceItem.classList.contains("active")
-                    ? "rotate(180deg)"
-                    : "rotate(0deg)";
-            }
-
-            // 250ms baad page navigate
-            setTimeout(() => {
-                window.location.href = serviceLink.getAttribute("href");
-            }, 250);
-        });
-    });
-</script>
 
 <body>
     <!-- Header Placeholder -->
@@ -115,7 +90,7 @@
                             systems,
                             and collaboration platforms tailored to your business needs.
                         </p>
-                        <a href="service-sharepoint.html" class="btn btn-primary btn-animated">Explore SharePoint</a>
+                        <a href="services.html#sharepoint" class="btn btn-primary btn-animated">Explore SharePoint</a>
                     </div>
                 </div>
             </div>
@@ -133,7 +108,7 @@
                             sources
                             and deploy across all devices in days, not months.
                         </p>
-                        <a href="service-powerapps.html" class="btn btn-primary btn-animated">Discover Power Apps</a>
+                        <a href="services.html#powerapps" class="btn btn-primary btn-animated">Discover Power Apps</a>
                     </div>
                 </div>
             </div>
@@ -150,7 +125,7 @@
                             Interactive dashboards and reports that drive data-driven decision making.
                             Real-time analytics for better business outcomes.
                         </p>
-                        <a href="service-powerbi.html" class="btn btn-primary btn-animated">View Power BI</a>
+                        <a href="services.html#powerbi" class="btn btn-primary btn-animated">View Power BI</a>
                     </div>
                 </div>
             </div>
@@ -167,7 +142,7 @@
                             Streamline business processes with automated workflows. Connect apps and services
                             to boost productivity and reduce manual work.
                         </p>
-                        <a href="service-power-automate.html" class="btn btn-primary btn-animated">Automate Now</a>
+                        <a href="services.html#powerautomate" class="btn btn-primary btn-animated">Automate Now</a>
                     </div>
                 </div>
             </div>
@@ -184,7 +159,7 @@
                             Custom web parts and extensions using SharePoint Framework.
                             Modern, responsive, and mobile-friendly solutions.
                         </p>
-                        <a href="service-spfx.html" class="btn btn-primary btn-animated">Learn SPFx</a>
+                        <a href="services.html#spfx" class="btn btn-primary btn-animated">Learn SPFx</a>
                     </div>
                 </div>
             </div>
@@ -267,7 +242,7 @@
                         Build custom business applications without code using Microsoft Power Apps.
                         Create apps that connect to your data and work seamlessly across devices.
                     </p>
-                    <a href="service-powerapps.html" class="btn btn-primary mt-2">Learn More</a>
+                    <a href="services.html#powerapps" class="btn btn-primary mt-2">Learn More</a>
                 </div>
                 <div class="service-card card-hover reveal stagger-2">
                     <div class="service-icon">
@@ -278,7 +253,7 @@
                         Transform your data into actionable insights with Power BI. Create interactive
                         dashboards and reports that drive data-driven decision making.
                     </p>
-                    <a href="service-powerbi.html" class="btn btn-primary mt-2">Learn More</a>
+                    <a href="services.html#powerbi" class="btn btn-primary mt-2">Learn More</a>
                 </div>
                 <div class="service-card card-hover reveal stagger-3">
                     <div class="service-icon">
@@ -289,7 +264,7 @@
                         Custom SharePoint Framework (SPFx) solutions and web parts. Extend SharePoint
                         with modern, responsive, and mobile-friendly components.
                     </p>
-                    <a href="service-spfx.html" class="btn btn-primary mt-2">Learn More</a>
+                    <a href="services.html#spfx" class="btn btn-primary mt-2">Learn More</a>
                 </div>
                 <div class="service-card card-hover reveal stagger-4">
                     <div class="service-icon">
@@ -300,7 +275,7 @@
                         Automate business processes and workflows with Power Automate. Connect apps
                         and services to streamline repetitive tasks and boost productivity.
                     </p>
-                    <a href="service-power-automate.html" class="btn btn-primary mt-2">Learn More</a>
+                    <a href="services.html#powerautomate" class="btn btn-primary mt-2">Learn More</a>
                 </div>
                 <div class="service-card card-hover reveal stagger-5">
                     <div class="service-icon">
@@ -311,7 +286,7 @@
                         Create surveys, quizzes, and forms with Microsoft Forms. Collect responses
                         and analyze data with integrated Power BI dashboards.
                     </p>
-                    <a href="service-microsoft-forms.html" class="btn btn-primary mt-2">Learn More</a>
+                    <a href="services.html#forms" class="btn btn-primary mt-2">Learn More</a>
                 </div>
                 <div class="service-card card-hover reveal stagger-6">
                     <div class="service-icon">
@@ -322,7 +297,7 @@
                         Design and implement custom workflow solutions using SharePoint Workflows
                         and Power Automate to automate business processes.
                     </p>
-                    <a href="service-workflow.html" class="btn btn-primary mt-2">Learn More</a>
+                    <a href="services.html#workflow" class="btn btn-primary mt-2">Learn More</a>
                 </div>
                 <div class="service-card card-hover reveal stagger-7">
                     <div class="service-icon">
@@ -333,7 +308,7 @@
                         Complete SharePoint implementation, customization, and migration services.
                         Build intranets, document management systems, and collaboration platforms.
                     </p>
-                    <a href="service-sharepoint.html" class="btn btn-primary mt-2">Learn More</a>
+                    <a href="services.html#sharepoint" class="btn btn-primary mt-2">Learn More</a>
                 </div>
             </div>
         </div>
@@ -689,7 +664,7 @@
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content footer-content--unified">
                 <div class="footer-section">
                     <h3 class="footer-title">TorridWave</h3>
                     <p class="footer-description">We specialize in Microsoft SharePoint and Power Platform solutions.
@@ -703,30 +678,43 @@
                         <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div> -->
                 </div>
-                <div class="footer-section">
+                <div class="footer-section footer-section--quick-links">
                     <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                                                <li><a href="service-support.html">Support</a></li>
-
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="service-powerapps.html">Power Apps</a></li>
-                        <li><a href="service-powerbi.html">Power BI</a></li>
-                        <li><a href="service-spfx.html">SPFx Development</a></li>
-                        <li><a href="service-power-automate.html">Power Automate</a></li>
-                        <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
-                        <li><a href="service-workflow.html">Workflow Solutions</a></li>
-                        <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
-                    </ul>
+                    <div class="footer-links-grid" role="navigation" aria-label="Footer navigation">
+                        <div class="footer-links-group">
+                            <p class="footer-links-subheading">Site</p>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="faqs.html">FAQs</a></li>
+                                <li><a href="service-support.html">Support</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links-group">
+                            <p class="footer-links-subheading">Service offerings</p>
+                            <ul class="footer-links">
+                                <li><a href="service-powerapps.html">Power Apps</a></li>
+                                <li><a href="service-powerbi.html">Power BI</a></li>
+                                <li><a href="service-spfx.html">SPFx Development</a></li>
+                                <li><a href="service-power-automate.html">Power Automate</a></li>
+                                <li><a href="service-microsoft-forms.html">Microsoft Forms</a></li>
+                                <li><a href="service-workflow.html">Workflow Solutions</a></li>
+                                <li><a href="service-sharepoint.html">SharePoint Solutions</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links-group">
+                            <p class="footer-links-subheading">Product solutions</p>
+                            <ul class="footer-links">
+                                <li><a href="law-firm-case-management.html">Law Firm Case Management</a></li>
+                                <li><a href="asset-management.html">Asset Management</a></li>
+                                <li><a href="support-tickets.html">Support Tickets</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4 class="footer-heading">Contact Info</h4>
@@ -909,6 +897,5 @@
         });
     </script>
 </body>
-
 
 </html>
