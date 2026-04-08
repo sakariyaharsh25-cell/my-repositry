@@ -173,29 +173,9 @@
                     }, 200);
                 });
                 
-                // Click to toggle dropdown (for touch devices)
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const isShowing = menu.classList.contains('show');
-                    
-                    // Close all other dropdowns
-                    freshDropdowns.forEach(otherDropdown => {
-                        if (otherDropdown !== dropdown) {
-                            const otherMenu = otherDropdown.querySelector('.dropdown-menu');
-                            const otherIcon = otherDropdown.querySelector('.dropdown-icon');
-                            hideDropdown(otherMenu, otherIcon);
-                        }
-                    });
-                    
-                    // Toggle current dropdown
-                    if (isShowing) {
-                        hideDropdown(menu, icon);
-                    } else {
-                        showDropdown(menu, icon);
-                    }
-                });
-                
+                // Desktop: rely on hover for dropdowns; do not preventDefault on the
+                // parent link so "Services", "Products", etc. navigate to their pages on click.
+
                 // Keep dropdown open when hovering over it
                 menu.addEventListener('mouseenter', function() {
                     clearTimeout(closeTimer);
