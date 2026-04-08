@@ -464,6 +464,43 @@ img {
     margin-bottom: 3rem;
 }
 
+/* Unified Quick Links: main pages + offerings in one structured section */
+.footer-content--unified {
+    gap: 2.5rem 3rem;
+}
+
+@media (min-width: 992px) {
+    .footer-content--unified {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.9fr) minmax(0, 1fr);
+        align-items: start;
+    }
+}
+
+.footer-section--quick-links {
+    min-width: 0;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    gap: 1.5rem 2rem;
+    align-items: start;
+}
+
+.footer-links-subheading {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0 0 0.75rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-links-group .footer-links li {
+    margin-bottom: 0.5rem;
+}
+
 .footer-section h3,
 .footer-section h4 {
     color: var(--white);
@@ -634,6 +671,14 @@ img {
     }
 
     .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content--unified {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links-grid {
         grid-template-columns: 1fr;
     }
 
@@ -994,6 +1039,8 @@ img {
     font-size: 1.8rem;
     line-height: 1;
     color: var(--primary-color);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .logo-subtitle {
@@ -1018,11 +1065,63 @@ img {
         font-size: 0.6rem;
     }
 }
-.logo-text {
-    font-family: 'Playfair Display', serif;
-    /* या वह font जो logo में use हुआ है */
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    /* यदि logo में uppercase है */
+
+/* ============================================
+   PRODUCT PAGE — MODERN REDESIGN
+   ============================================ */
+.product-overview-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.product-overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.screenshot-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
+
+.timeline-modern .timeline-panel {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    padding: 30px;
+}
+
+.btn-corporate-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 120, 212, 0.4);
+    color: #fff;
+}
+
+.product-feature-row {
+    padding: 60px 0;
+}
+
+.feature-list-modern li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
